@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+}
+
+
+
+
+
+img {
+    height: 325px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 10px;
+
+}
