@@ -1,21 +1,44 @@
+/**\
+General
+\**/
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .container {
-    width: 100%;
+  max-width: 768px;
 }
-
-
-
-
 
 img {
-    height: 325px;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
-    object-fit: cover;
-    width: 100%;
-    margin-bottom: 10px;
-
+  height: 325px;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 10px;
 }
+
+a {
+  color: #000;
+  text-decoration: none;
+  outline: none !important;
+}
+
+/**\
+footer
+\**/
+footer .container {
+  background: #353535;
+}
+
+footer li {
+  color: #ffffff;
+}
+
+footer img {
+  height: 15%;
+  width: 155px;
+  filter: invert(100%);
+}
+
+/*# sourceMappingURL=styles.css.map */
