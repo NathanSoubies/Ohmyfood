@@ -6,16 +6,15 @@ General
 }
 
 .container {
-  max-width: 768px;
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
 }
 
-img {
-  height: 325px;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  object-fit: cover;
-  width: 100%;
-  margin-bottom: 10px;
+body, html {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -25,14 +24,173 @@ a {
 }
 
 /**\
+Header
+\**/
+.header {
+  text-align: center;
+  height: 62px;
+  background: #FFF;
+}
+
+header a {
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  width: 158px;
+  height: 15%;
+  padding-top: 18px;
+}
+
+/**\
+Main
+\**/
+.local {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  background-color: #f3f3f3;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  display: flex;
+  justify-content: center;
+}
+
+.reservation p {
+  margin: 10px 10% 0 10%;
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+.btn_princ {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  cursor: pointer;
+  transition-duration: 0.25s;
+}
+
+.btn_princ:hover {
+  background-color: #fff;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+}
+
+.fonctionnement {
+  padding: 2rem 1rem;
+}
+
+.step {
+  padding: 1.5rem;
+  margin: 1rem 0 1rem 0.75rem;
+  margin-top: 1rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border-radius: 1.25rem;
+  background-color: #f6f6f6;
+  display: flex;
+  position: relative;
+}
+
+.step span {
+  display: flex;
+}
+
+.step span i {
+  margin-right: 10px;
+}
+
+.step::before {
+  counter-increment: compteListe 1;
+  content: counter(compteListe) " ";
+  background: #9356dc;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  left: -0.75rem;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 2rem 1rem;
+}
+
+.rest {
+  background-color: #fff;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.rest img {
+  height: 12rem;
+  width: 100%;
+  border: 0 solid transparent;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  object-fit: cover;
+}
+
+.rest_descri {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 0 0.25rem;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+/**\
 footer
 \**/
 footer .container {
   background: #353535;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 footer li {
   color: #ffffff;
+  margin: 0.5rem 0;
+}
+
+footer i {
+  width: 1.2rem;
+  margin-right: 0.5rem;
 }
 
 footer img {
@@ -40,5 +198,11 @@ footer img {
   width: 155px;
   filter: invert(100%);
 }
+
+footer li span {
+  display: flex;
+}
+
+/*# sourceMappingURL=styles.css.map */
 
 /*# sourceMappingURL=styles.css.map */
