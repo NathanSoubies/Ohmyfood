@@ -2,6 +2,7 @@
     font-family: Shrikland;
     src: url(/Font/Shrikhand-Regular.ttf);
 }
+
 /**\
 Header
 \**/
@@ -32,6 +33,7 @@ header i {
 header img{
     width: 200px;
 }
+
 /**\
 Main
 \**/
@@ -127,9 +129,31 @@ em {
     align-items: flex-end;
     padding-left: .5rem;
 }
+
+.commande {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+button {
+    border: 0;
+    padding: .75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #686868;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    transition-duration: .25s;
+    box-shadow: .25rem .25rem 10px rgba(0,0,0,.25);
+    cursor: pointer;
+}
 /**\
 footer
 \**/
+
 footer .container {
     background: #353535;
     display: flex;
