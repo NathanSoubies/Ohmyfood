@@ -1,0 +1,160 @@
+@font-face {
+  font-family: Shrikland;
+  src: url(/Font/Shrikhand-Regular.ttf);
+}
+/**\
+Header
+\**/
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1000;
+}
+
+header i {
+  position: absolute;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #000;
+}
+
+header img {
+  width: 200px;
+}
+
+/**\
+Main
+\**/
+main img {
+  max-width: 100%;
+  max-height: 32rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+}
+
+.title {
+  padding: 1rem 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-family: Shrikhand;
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+}
+
+.submenu {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+h2::after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.submenu li {
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 100%;
+}
+
+main span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+}
+
+h3 {
+  display: block;
+  font-size: 1.33em;
+  font-weight: bold;
+}
+
+main p {
+  display: block;
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+}
+
+em {
+  font-weight: 2.5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
+}
+
+/**\
+footer
+\**/
+footer .container {
+  background: #353535;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+footer li a {
+  color: #ffffff;
+  margin: 0.5rem 0;
+}
+
+footer i {
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+footer img {
+  height: 15%;
+  width: 155px;
+  filter: invert(100%);
+}
+
+footer li span {
+  display: flex;
+}
+
+/*# sourceMappingURL=styles_pages.css.map */
