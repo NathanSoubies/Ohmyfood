@@ -107,6 +107,47 @@ main span {
   flex: 1;
 }
 
+.annimation {
+  display: flex;
+  align-items: flex-end;
+  width: 29px;
+  transition-duration: 750ms;
+}
+
+.price {
+  font-weight: bold;
+  margin: 0 20px 12px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.icone {
+  background: #99E2D0;
+  padding: 22px;
+}
+
+.icone i {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #ffffff;
+  transition-duration: 680ms;
+}
+
+li:hover .annimation {
+  width: 99px;
+  transition-delay: 100ms;
+  transition-duration: 750ms;
+}
+
+li:hover .icone i {
+  transform: rotate(1turn);
+  transition-delay: 100ms;
+  transition-duration: 680ms;
+}
+
 h3 {
   display: block;
   font-size: 1.33em;
