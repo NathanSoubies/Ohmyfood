@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import '__variable.scss'; 
+@import '__mixins.scss'; 
+@import "__pageresto.scss";
+@import '__footer.scss';
+
+
+/**GLOBAL**/
+html 
+{
+    font-size: 62.5%;
+}
+
+* 
+{
+    box-sizing: border-box ;
+}
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+    line-height: normal; 
+    display: block;
+    font-size: 1.4rem;
+}
+
+
+a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+.formulaire
+{
+    position:absolute;
+    left:-999px;
+}
+
+ul 
+{
+    list-style:none;
+    padding:0;
+}
+
+.container 
+{
+    max-width:1400px;
+    width: 100%;
+    margin: 0 auto; /*top et bottom : 0 left et right : 0*/
+    padding : 0 15px;
+}
+
+.container1 
+{
+    position: relative;
+    text-align: center;
+    color: $blanc;
+}
+
+// loader
+
+.loader
+{
+    @include flex (center);  
+    padding: 0 11rem;   
+    background: #f2f2f2;
+    position: fixed;
+    font-size: 5rem;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    animation: loader 4s forwards;
+    @keyframes loader
+    {
+        0%{
+            opacity: 1;
+        }
+        99%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+}
+
+.word
+{
+    opacity: 0;
+    font-family: "Shrikhand", sans-serif;
+    &:nth-of-type(1)
+    {
+        animation: go 2s ease forwards;
+        color: #c1a5d3;   
+    }
+    &:nth-of-type(2)
+    {    
+        animation: go 2s ease forwards;
+        animation-delay: 1s;
+        color: #b490c3;
+    }
+    &:nth-of-type(3)
+    {
+        animation: go 2s ease forwards;
+        animation-delay: 2s;
+        color: #b080db;
+    }
+    @keyframes go
+    {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+}
+
+.duree
+{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+}
+.duree:after
+{
+    content: ".";
+	font-size: 0;
+	display: block;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border-radius: 50%;
+	border: 6px solid white;
+	border-color: white transparent white transparent;
+	animation: duree 1200ms 800ms linear forwards;
+}
+
+@keyframes duree
+{
+	from {
+	  transform: rotate(0deg);
+      opacity: 1;
+	}
+
+	to{
+		transform: rotate(360deg);
+		opacity: 0;
+	}
+}
+
+.gt
+{
+    opacity: 0;
+    animation: gt 4s forwards;
+    @keyframes gt
+    {
+        0%{
+            opacity: 0;
+        }
+        99%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+}
+
+ /* header */
+.logo
+{
+    font-family: 'Shrikhand', cursive;
+    font-weight: 500;
+}
+
+#logo
+{
+    a
+    {
+        @include flex (center);
+        padding: 2rem 0 0.5rem;  
+    }
+    img
+    {
+        width: 45%;
+        @media (min-width: 768px)
+        {
+            width: 30%;
+        }
+        @media (min-width: 992px) /*dekstop*/
+        {
+            width: 20%;
+        }
+    }
+}
+
+#form
+{
+    @include flex2;  
+    background: $grey;
+    box-shadow: 0 0.2em 0.5em grey inset;
+    padding: 1rem;
+    margin: 1rem 0 -2rem ;
+    @media (min-width: 992px) /*dekstop*/
+    { 
+        margin-top: 1rem;    
+    }
+}
+
+#search
+{
+    border: none;
+    font-size: 1.5rem;
+    background: $grey;
+}
+.fa-map-marker-alt
+{
+    padding: 1rem;
+    font-size: 15px;
+}
+
+/* debut page */
+#titre
+{    
+    @include flex3 (center);
+    @media (min-width: 992px)
+    {
+        display: flex;
+        flex-direction: inherit;
+        gap: 10rem;
+        margin-top: 3rem;
+    }
+}
+
+#presentation
+{
+    background: $grismoyen;
+    width: 100%;
+    align-items: center;
+    padding: 0rem 2rem 2rem;
+    margin-top: 2rem;
+    @media (min-width: 992px)
+    {
+        padding: 1rem 2rem 2rem;
+        border-radius: 3rem;
+        width: 70%;
+    }
+}
+
+#reservez
+{
+    @include flex3 (center);
+    p, h1
+    {
+        text-align: center;
+    }
+}
+
+#explorer
+{
+    width: auto;
+    background: linear-gradient(170deg, $rose, $violet);
+    color: $blanc;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 2rem 0px rgb(0 0 0 / 30%);
+    padding: 1.5rem;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+    &:hover 
+    {
+        transform: scale(1.05);
+        background: linear-gradient(170deg, #ff79dacf, #9356dccf);
+        box-shadow: 0px 0px 5rem 0px rgb(0 0 0 / 30%);
+    }
+    a
+    {
+        margin-left: 1rem;
+    }
+}
+
+#fonctionnement
+{
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem;
+    width: 85%;
+    @media (min-width: 768px)
+    {
+        display: flex;
+        align-items: flex-start;
+        width: 60%;
+    }
+    @media (min-width: 992px)
+    {
+        width: 78%;
+    }
+    ul
+    {
+        width: 110%;
+        @media (min-width: 992px)
+        {
+            width: inherit;
+        }
+    }
+
+    li
+    {
+        @include center;
+        padding: 0 0 0 5rem;
+        margin: 0 0 3rem 0;
+        border-radius: 1rem;
+        box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem $gris;
+        background-color: $grismoyen;
+        gap: 1rem;
+        height: 6rem;
+    }
+
+    ul li:hover
+    {
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 400ms;
+        background: $roseclaire;
+            &:hover 
+            {
+                transform: scale(1.05);
+            }        
+    }
+}
+
+.nombre
+{
+    background-color: $violet;
+    color: $blanc;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 2rem;
+    margin-left: -7rem;
+}
+
+.fa-mobile-alt, .fa-list-ul, .fa-store
+{
+    padding: 1rem;
+}
+
+.fonctionnement:hover .color
+{
+    color: $violet;
+}
+
+/* restaurants */
+#restaurant
+{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem; 
+    background-color: $grismoyen;
+    padding: 1rem 0;    
+    @media (min-width: 768px)
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;  
+    }    
+}
+
+#titre2
+{
+    @include center;
+}
+
+.restaurant
+{
+    @include flex3 (center);
+     margin-bottom: 2rem;
+     gap: 3rem;
+     @media (min-width: 768px)
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+article
+{
+    width: 100%;
+    background-color: $blanc;
+    border-radius: 2rem;
+    box-shadow: 0 0 3rem 0 rgb(0 0 0 / 30%);
+    position: relative;
+    @media (min-width: 768px)
+    {
+        width: 45%;
+        margin: 1rem;
+        
+    }
+    img
+    {
+        height: 20rem;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 2rem 2rem 0 0;
+    }
+}
+
+.bannier
+{
+    display: flex;
+    font-weight: 700;
+    padding: 0 1rem;
+    background: $vertclaire;
+    border-radius: 0.2rem;
+    color: $vert;
+    line-height: 2rem;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    
+}
+
+.description
+{
+    @include flex (space-between);
+    margin-bottom: -2rem;
+    position: relative;
+}
+
+.descript
+{
+    padding: 0 0 0 1rem;
+    font-size: large;    
+}
+
+.fa-heart
+{
+    font-size: x-large;
+    margin: 0 1rem 0 0; 
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+    &:hover 
+    {
+        transform: scale(1.15);
+        opacity: 100%;
+        
+        /* Créer le dégradé. */
+        background-image: linear-gradient(0deg,$rose,$violet);
+        
+        /*affiche le dégradé comme une couleur de texte  */
+        -webkit-background-clip: text; 
+        background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+    }
+
+}
+
+.couleur:hover
+{
+    opacity: 100%;
+    background: linear-gradient(0deg,$rose,$violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+
+@media (min-width: 992px) /*dekstop*/
+{ 
+    /* debut page */
+    .container2 
+    {
+        max-width:1400px;
+        width: 100%;
+        margin: 0 auto; /*top et bottom : 0 left et right : 0*/
+        padding : 0 15px;
+    }    
+}
