@@ -482,6 +482,7 @@ ul {
     opacity: 0;
   }
 }
+
 .gt {
   opacity: 0;
   animation: gt 4s forwards;
