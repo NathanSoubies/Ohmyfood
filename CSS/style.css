@@ -588,6 +588,16 @@ ul {
   text-align: center;
 }
 
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+h2{
+  font-size: 20px;
+  font-weight: bold;
+}
+
 #explorer {
   width: auto;
   background: linear-gradient(170deg, #ff79da, #9356dc);
@@ -749,7 +759,7 @@ article img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: -2rem;
+  margin-bottom: 1rem;
   position: relative;
 }
 
@@ -762,7 +772,7 @@ article img {
   font-size: x-large;
   margin: 0 1rem 0 0;
   position: absolute;
-  top: 3rem;
+  top: 1.5rem;
   right: 1rem;
   transform: scale(1);
   transition-property: transform;
