@@ -392,6 +392,7 @@ ul {
   opacity: 1;
   animation: loader 4s forwards;
 }
+
 @keyframes loader {
   0% {
     opacity: 1;
@@ -592,11 +593,20 @@ ul {
 h1 {
   font-size: 25px;
   font-weight: bold;
+  width: 80%;
+    margin: 20px 0px;
 }
 
 h2{
+  font-size: 25px;
+  font-weight: bold;
+  margin: 25px 0px;
+}
+
+.description h3 {
   font-size: 20px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 #explorer {
@@ -609,6 +619,7 @@ h2{
   transform: scale(1);
   transition-property: transform;
   transition-duration: 400ms;
+  margin-top: 20px;
 }
 #explorer:hover {
   transform: scale(1.05);
@@ -760,7 +771,6 @@ article img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
   position: relative;
 }
 
@@ -769,6 +779,9 @@ article img {
   font-size: large;
 }
 
+.rest {
+  margin-bottom: 10px;
+}
 .fa-heart {
   font-size: x-large;
   margin: 0 1rem 0 0;
@@ -779,6 +792,7 @@ article img {
   transition-property: transform;
   transition-duration: 400ms;
 }
+
 .fa-heart:hover {
   transform: scale(1.15);
   opacity: 100%;
